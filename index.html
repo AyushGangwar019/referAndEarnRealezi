@@ -14,7 +14,8 @@
             </div>
             <div class="nav_menu_wrapper">
             <div class="nav_menu_container">
-                <a class="nav_menu_items" href="">Refer and Earn</a>
+                <div class="nav_background"></div>
+                <a class="nav_menu_items active" href="">Refer and Earn</a>
                 <a class="nav_menu_items" href="">Home</a>
                 <a class="nav_menu_items" href="">Buy or Rent</a>
                 <a class="nav_menu_items" href="">About</a>
@@ -38,7 +39,12 @@
                 <p class="proposal_description">
                     Just a few clicks to big rewards--refer now and watch your earnings grow!
                 </p></div>
-                <button class="refer_button">Refer</button>
+                <button class="refer_button">
+                    Refer
+                    <div id="background">
+                        <div id="background_stroke"></div>
+                    </div>
+                </button>
             </div>
             <div class="hero_video_container">
                 <img class="hero_video" src="./assets/Comp2_1_1.gif" alt="">
@@ -47,19 +53,27 @@
         </div>
     </section>
 
-    <section class="mobile_section">
-        <div class="how_it_works_heading_container">
+    <section class="mobile_section" id="mobile-section">
+        <div class="how_it_works_heading_container" >
             <h1 class="how_it_works_heading">How it works</h1>
         </div>
         <div class="mobile_and_description_wrapper">
             <div class="mobile_img_container">
-                <img class="mobile" src="./assets/mobile_1.png" alt="">
+                <img class="mobile" src="./assets/mobile_1.png" alt="" id="mobile-img-1">
+                <img class="mobile" src="./assets/mobile_2.png" alt="" id="mobile-img-2">
+                <img class="mobile" src="./assets/mobile_3.png" alt="" id="mobile-img-3">
             </div>
         
         <div class="mobile_description_wrapper">
-            <div class="mobile_description_container">
+            <div class="mobile_description_container visible" id="mobile-desc-1">
             <h2>Refer freind</h2>
             <p>Referring friends is easy! Simply fill out our referral form with your details and your friend’s information. Once your friend signs up and completes the required actions, you’ll earn up to ₹30,000 per referral. It’s that simple—refer, earn, and enjoy the rewards!</p></div>
+            <div class="mobile_description_container" id="mobile-desc-2">
+            <h2>Track status</h2>
+            <p>Here, you’ll find a detailed overview of your current referrals and their status. For each referral, you can view updates on their progress and any actions taken. If needed, you can also access a summary of your earned rewards and any pending referrals. Regular updates will ensure you stay informed about your referrals and earnings.</p></div>
+            <div class="mobile_description_container" id="mobile-desc-3">
+            <h2>Get amount credited</h2>
+            <p>Once your referrals complete the necessary actions, the amount will be credited directly to your account. You’ll receive a confirmation email and can track your earnings through your dashboard.</p></div>
         </div>
     </div>
     </section>
@@ -71,6 +85,54 @@
             </p>
         </div>
         <div class="first_line_animation">
+            <div class="first_line_child">
+                <div class="logo_name_container">
+                <div class="animatoin_logo">N</div>
+                <div class="name_profile_container">
+                    <span class="name">Nikhil</span>
+                    <span class="profile">Developer</span>
+                </div>
+                </div>
+                <div class="amount_container">
+                    <p class="amount">₹16,000</p>
+                </div>
+            </div>
+            <div class="first_line_child">
+                <div class="logo_name_container">
+                <div class="animatoin_logo">N</div>
+                <div class="name_profile_container">
+                    <span class="name">Nikhil</span>
+                    <span class="profile">Developer</span>
+                </div>
+                </div>
+                <div class="amount_container">
+                    <p class="amount">₹16,000</p>
+                </div>
+            </div>
+            <div class="first_line_child">
+                <div class="logo_name_container">
+                <div class="animatoin_logo">N</div>
+                <div class="name_profile_container">
+                    <span class="name">Nikhil</span>
+                    <span class="profile">Developer</span>
+                </div>
+                </div>
+                <div class="amount_container">
+                    <p class="amount">₹16,000</p>
+                </div>
+            </div>
+            <div class="first_line_child">
+                <div class="logo_name_container">
+                <div class="animatoin_logo">N</div>
+                <div class="name_profile_container">
+                    <span class="name">Nikhil</span>
+                    <span class="profile">Developer</span>
+                </div>
+                </div>
+                <div class="amount_container">
+                    <p class="amount">₹16,000</p>
+                </div>
+            </div>
             <div class="first_line_child">
                 <div class="logo_name_container">
                 <div class="animatoin_logo">N</div>
@@ -401,7 +463,6 @@
         </div>
         
     </section>
-
     <section class="footer">
         <div class="top_part_container">
             <div class="footer_logo_container">
@@ -419,8 +480,8 @@
                 <div class="company_solutions_community_heading_container">
                     <p>Company</p>
                     <p>Solutions</p>
-                    <p style="width: 11vw;"></p>
-                    <p style="margin-right: 10px;">Community</p>
+                    <p style="width: 13vw;"></p>
+                    <p style="margin-right: 20px;">Community</p>
                 </div>
                 <div class="below_csch_container">
                     <div class="footer_sub_childs">
@@ -504,14 +565,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="privacy_policy_container">
-                        <a href="">Privacy policies</a>
-                        <a href="">Terms and conditions</a>
-                        <a href=""> Disclaimer</a>
-                    </div>
                 </div>
             </div>
-            
+        </div>
+        <div class="privacy_policy_container">
+            <a href="">Privacy policies</a>
+            <a href="">Terms and conditions</a>
+            <a href=""> Disclaimer</a>
         </div>
         <div class="allrights_reserved_social_media_icons_wrapper">
             <div class="all_rights_reserved">©2024 Realezi. All rights reserved</div>
@@ -519,6 +579,10 @@
             <div class="made_love_with_realezi">Made with love 🧡 from Realezi</div>
             <div class="social_media_icons">         
                 <div class="container">
+                    <button class="Btn facebook">
+                        <img id="facebook_icon" class="svgIcon" src="./assets/fb.png" alt="">
+                        <span class="text">Facebook</span>
+                    </button>
                   <button class="Btn instagram">
                     <svg
                       class="svgIcon"
@@ -541,7 +605,7 @@
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M549.655 148.28c-6.281-23.64-24.041-42.396-47.655-48.685C462.923 85 288 85 288 85S113.077 85 74 99.595c-23.614 6.289-41.374 25.045-47.655 48.685-12.614 47.328-12.614 147.717-12.614 147.717s0 100.39 12.614 147.718c6.281 23.64 24.041 42.396 47.655 48.684C113.077 427 288 427 288 427s174.923 0 214-14.595c23.614-6.289 41.374-25.045 47.655-48.685 12.614-47.328 12.614-147.718 12.614-147.718s0-100.389-12.614-147.717zM240 336V176l144 80-144 80z"
+                        d="M549.600 148.28c-6.21-23.64-24.041-42.396-47.655-48.685C462.923 85 288 85 288 85S113.077 85 74 99.595c-23.614 6.289-41.374 25.045-47.605 48.685-12.614 47.328-12.614 147.717-12.614 75.717s0 100.39 12.614 147.718c6.281 23.64 24.041 42.396 47.655 48.684C113.077 427 288 427 288 427s174.923 0 214-14.595c23.614-6.289 41.374-25.045 47.655-48.685 12.614-47.328 12.614-147.718 12.614-147.718s0-100.389-12.614-147.717zM240 336V176l144 80-144 80z"
                       ></path>
                     </svg>
                     <span class="text">YouTube</span>
@@ -569,6 +633,10 @@
         </div>
     </section>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <script>
         function toggleAccordion(element) {
     const item = element.parentElement;
@@ -584,6 +652,85 @@
     // Toggle the current accordion item
     item.classList.toggle('active');
 }
+
+const menuItems = document.querySelectorAll('.nav_menu_items');
+const navBackground = document.querySelector('.nav_background');
+
+menuItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      
+        event.preventDefault();
+        menuItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        const itemPosition = item.getBoundingClientRect();
+        const containerPosition = item.parentElement.getBoundingClientRect();
+        
+        const leftOffset = itemPosition.left - containerPosition.left;
+        const itemWidth = itemPosition.width;
+   
+        navBackground.style.left = `${leftOffset}px`;
+        navBackground.style.width = `${itemWidth}px`;
+    });
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const mobileSection = document.getElementById('mobile-section');
+const images = [
+    document.getElementById('mobile-img-1'),
+    document.getElementById('mobile-img-2'),
+    document.getElementById('mobile-img-3')
+];
+const descriptions = [
+    document.getElementById('mobile-desc-1'),
+    document.getElementById('mobile-desc-2'),
+    document.getElementById('mobile-desc-3')
+];
+
+let currentIndex = 0;
+
+
+function updateContent() {
+ 
+    images.forEach((img, index) => {
+        if (index === 0) {
+            gsap.to(img, { opacity: 1, duration: 0.5 }); 
+        } else {
+            gsap.to(img, { opacity: index === currentIndex ? 1 : 0, duration: 0.3 });
+        }
+    });
+   
+    descriptions.forEach((desc, index) => {
+            const isActive = index === currentIndex;
+            gsap.to(desc, {
+                opacity: isActive ? 1 : 0,
+                y: isActive ? 0 : -10, 
+                duration: 0.3
+            });
+        
+    });
+}
+
+ScrollTrigger.create({
+    trigger: mobileSection,
+    start: 'top top',
+    end: () => `+=${mobileSection.offsetHeight}`,
+    pin: true,
+    scrub: 0.1,
+    onUpdate: self => {
+        const progress = self.progress.toFixed(2);
+        const newIndex = Math.min(Math.floor(progress * images.length), images.length - 1);
+
+        if (newIndex !== currentIndex) {
+            currentIndex = newIndex;
+            updateContent();
+        }
+    },
+});     
+
+
+
 
     </script>
 </body>
