@@ -9,9 +9,16 @@
     font-family: 'Familjen Grotesk', sans-serif;
 }
 
-body{
+html, body {
     overflow-x: hidden;
+    scrollbar-width: none;
 }
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 
 .first_section{
     background-image:url(./assets/hero_bg.png);
@@ -266,11 +273,16 @@ body{
         color: white;
         font-size:4vw;
         margin-bottom: 10px;
+        transition: color 0.5s ease;
     }
     #background{
         position: absolute;  
         left: -500%;
         top: -200%;
+        transition: left 0.5s ease;
+    }
+    .refer_button:hover #background{
+        left: 3%;
     }
 
     .hero_video_container{
@@ -297,11 +309,17 @@ body{
 }
 }
 
-/* For medium devices (tablets, 600px to 900px) */
-@media (min-width: 601px) and (max-width: 1030px) {
+@media (min-width: 601px) and (max-width: 1030px) and (min-height: 701px) {
     .first_section{
         width: 100vw;
         height: 80vmin;
+    }
+
+    .navbar {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        height: 100px;
     }
     
     .logo_container {
@@ -309,8 +327,136 @@ body{
         padding-left: 10%;
     }
     .logo {
+        width: 18vw;
+        height: 30px;
+    }
+
+    .nav_menu_wrapper {
+        display: flex;
+        width: 80%;
+        padding-right: 5%;
+        justify-content: center;
+    }
+    
+    .nav_menu_container {
+        position: relative;
+        height: 30px;
+        width: 60vw;
+    }
+
+    .nav_background {
+        top: 15%;
+        left: 3%;
+        width: 22%;
+        height: 70%;
+        background-color:#111F3C;
+        border-radius: 50px;
+        z-index: 0;
+        transition: all 0.4s ease;
+    }
+    
+    .nav_menu_items {
+        text-decoration: none;
+        font-size: 1.8vw;
+    }
+
+    .hero_section {
+        flex-direction: row; 
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .refer_friends_section{
+        width: 50%;
+        height: 100%;
+        padding-left: 5vw;
+    }
+    
+    .main_proposal{
+        font-size: 4.5vw;
+        color: white;
+        position: relative;
+    }
+    
+    .top_line{
+        font-style: normal;
+        font-weight: 700;
+    }
+    
+    .main_proposal .top_line span{
+        font-weight: 400;
+        font-style: italic;
+    }
+    .main_proposal .below_line{
+        font-weight: 700;
+        font-style: italic;
+        color:#EC7100;
+    }
+    
+    .proposal_description{
+        font-size: 2.5vw;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .refer_button{
         width: 20vw;
-        height: 40px;
+        height: 5.5vw;
+        background: none;
+        border: 1.5px solid white;
+        color: white;
+        font-size:2.5vw;
+        margin-bottom: 10px;
+    }
+    #background{
+        position: absolute;  
+        left: -300%;
+        top: -150%;
+    }
+
+    .hero_video_container{
+        height: 100%;
+        position:static;
+        width: 50%;
+        overflow: hidden;
+    }
+    
+    .hero_video{
+         position: absolute;
+         width: 100vw;
+        top: 20%;
+        left: 25%;
+        }
+
+.video_bg_image{
+    position: absolute;
+    width: 30rem;
+    height: 25rem;
+    top: 25%;
+    left: 40%;
+ 
+}
+}
+
+@media (max-width: 1030px) and (min-width: 400px) and (orientation: landscape) {
+    .first_section{
+        width: 100vw;
+        height: 100vmin;
+    }
+
+    .navbar {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        height: 80px;
+    }
+    
+    .logo_container {
+        width: 20%;
+        padding-left: 10%;
+    }
+    .logo {
+        width: 18vw;
+        height: 30px;
     }
 
     .nav_menu_wrapper {
@@ -343,7 +489,7 @@ body{
     }
 
     .hero_section {
-        flex-direction: row; /* Keep elements side by side */
+        flex-direction: row; 
         justify-content: space-between;
         padding: 20px;
     }
@@ -354,8 +500,9 @@ body{
     }
     
     .main_proposal{
-        font-size: 5vw;
+        font-size: 3.5vw;
         color: white;
+        position: relative;
     }
     
     .top_line{
@@ -374,14 +521,14 @@ body{
     }
     
     .proposal_description{
-        font-size: 2.5vw;
+        font-size: 2vw;
         margin-top: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     
     .refer_button{
         width: 20vw;
-        height: 4rem;
+        height: 5.5vw;
         background: none;
         border: 1.5px solid white;
         color: white;
@@ -390,13 +537,16 @@ body{
     }
     #background{
         position: absolute;  
-        left: -300%;
-        top: -150%;
+        left: -200%;
+        top: -200%;
+    }
+    .refer_button:hover #background{
+        left: 3%;
     }
 
     .hero_video_container{
         height: 100%;
-        position: relative;
+        position:static;
         width: 50%;
         overflow: hidden;
     }
@@ -404,16 +554,16 @@ body{
     .hero_video{
          position: absolute;
          width: 100vw;
-        top: 10%;
-        left: -50%;
+        top: 20%;
+        left: 25%;
         }
 
 .video_bg_image{
     position: absolute;
-    width: 45rem;
-    height: 40rem;
-    top: 20%;
-    left: -25%;
+    width: 30rem;
+    height: 25rem;
+    top: 25%;
+    left: 40%;
  
 }
 }
@@ -448,14 +598,17 @@ body{
     width: 50%;
 }
 
+
 .mobile {
     position: absolute; 
     top: 10%; 
     left: 60%; 
     width: 16vw; 
+    height: 65vh;
     max-width: 250px; 
     opacity: 0; 
     transition: opacity 0.5s ease;
+    overflow: hidden;
 }
 
 .mobile_description_wrapper {
@@ -486,8 +639,10 @@ body{
 }
 
 #mobile-img-2, #mobile-img-3{
-    max-width: 240px;
-    height: 485px;
+    width: 15.9vw;
+    height: 64.5vh;
+    border-radius: 40px;
+    margin-left: 2px;
 }
 
 #mobile-img-1, #mobile-desc-1 {
@@ -503,6 +658,127 @@ body{
     transform: translateY(0)
 }
 
+@media (max-width: 600px){
+    .mobile_section{
+        height: 150vmin;
+    }
+    
+.how_it_works_heading_container{
+    height: 150px;
+    font-size: 5vw;
+    margin-bottom: 35px;
+}
+
+.mobile {  
+    top: 20%; 
+    left: 15%; 
+    width: 40vw; 
+    height: 50vh;
+    max-width: 250px; 
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+.mobile_description_container {
+    width: 75%;
+    height: 100%;
+    font-size: 3.5vw;
+    color: #A1A1A1; 
+    line-height: 1.5;
+    font-weight: 600;
+}
+.mobile_description_container h2 {
+    font-size: 3.7vw;
+    color: #000000; 
+    margin: 0;
+}
+#mobile-img-2, #mobile-img-3{
+    width: 39.9vw; 
+    height: 49.9vh;
+}
+
+}
+
+@media (min-width: 601px) and (max-width: 1030px) and (min-height: 701px){
+    .mobile_section{
+        height: 150vmin;
+    }
+    
+.how_it_works_heading_container{
+    height: 150px;
+    font-size: 4vw;
+    margin-bottom: 35px;
+}
+
+.mobile {  
+    top: 20%; 
+    left: 15%; 
+    width: 40vw; 
+    height: 60vh;
+    max-width: 250px; 
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+.mobile_description_container {
+    width: 75%;
+    height: 100%;
+    font-size: 3vw;
+    color: #A1A1A1; 
+    line-height: 1.5;
+    font-weight: 600;
+}
+.mobile_description_container h2 {
+    font-size: 3.2vw;
+    color: #000000; 
+    margin: 0;
+}
+#mobile-img-2, #mobile-img-3{
+    width: 39.9vw; 
+    height: 59.9vh;
+}
+}
+
+@media (max-width: 780px) and (min-width: 400px) and (orientation: landscape){
+    .mobile_section{
+        height: 150vmin;
+    }
+    
+.how_it_works_heading_container{
+    height: 100px;
+    font-size: 4vw;
+    margin-bottom: 35px;
+}
+
+.mobile {  
+    top: 20%; 
+    left: 25%; 
+    width: 25vw; 
+    height: 100vh;
+    max-width: 250px; 
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+}
+.mobile_description_container {
+    width: 75%;
+    height: 100%;
+    font-size: 3vw;
+    color: #A1A1A1; 
+    line-height: 1.5;
+    font-weight: 600;
+}
+.mobile_description_container h2 {
+    font-size: 3.2vw;
+    color: #000000; 
+    margin: 0;
+}
+#mobile-img-2, #mobile-img-3{
+    width: 24.9vw; 
+    height: 99.9vh;
+}
+}
+
+@media (min-width: 1000px)and (orientation: landscape){
+
+}
 
 .people_are_earning{
     width: 100%;
@@ -552,7 +828,7 @@ body{
     top: 70%;
     left: -45%;
     animation: rightAnimation 10s linear infinite; 
-}
+} 
 
 @keyframes rightAnimation {
     0% {
@@ -609,7 +885,6 @@ body{
 }
 
 .first_line_child:hover{
-    align-items: center;
     justify-content: end; 
     padding: 0 0; 
     background-color: white;
@@ -661,25 +936,208 @@ body{
 .amount_container{
     width: 100px;
     height: 40px;
-    font-size: 19px;
+    font-size: 1.5vw;
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ec720033;
     color: #EC7100;
-    transition: width 0.5s ease-in-out, font-size 0.3s ease;
+    transition: width 0.5s ease-in-out, font-size 0.3s ease, scale 0.3s ease;
 }
 
 .first_line_child:hover .amount_container{
     width: 100%;
     height: 100%;
-    font-size: 25px;
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
+}
+
+.first_line_child:hover .amount{
+    transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+    .people_are_earning{
+        width: 100%;
+        height: 70vmin;
+        border-radius: 20px;
+        position: relative;
+    }
+    .people_earning_heading{
+        font-size: 4.5vw;
+    }
+    
+.first_line_child{
+    width: 310px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 0 5px;
+}
+.first_line_child:hover {
+    justify-content: space-between;
+    padding: 0 5px;
+    background-color: #2138667a;
+}
+
+.animatoin_logo{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+.name{
+    font-size: 15px;
+}
+
+.profile{
+    font-size: 12px;
+    color: #A1A1A1;
+}
+.amount_container{
+    width: 70px;
+    height: 30px;
+    font-size: 3vw;
+    margin-left: 25px;
+}
+
+.first_line_child:hover .logo_name_container {
+    display: flex;
+}
+.first_line_child:hover .amount_container {
+    width: 70px;
+    height: 30px;
+    font-size: 3vw;
+    margin-left: 25px;
+    background-color: #ec720033;
+    color: #EC7100;
+}
+    
+.first_line_child:hover .amount{
+    transform: none;
+}
+}
+
+@media (min-width: 601px) and (max-width: 1030px) and (min-height: 701px){
+    .people_are_earning{
+        width: 100%;
+        height: 50vmin;
+        border-radius: 20px;
+        position: relative;
+    }
+    .people_earning_heading{
+        font-size: 4.5vw;
+    }
+    
+.first_line_child{
+    width: 310px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 0 5px;
+}
+.first_line_child:hover {
+    justify-content: space-between;
+    padding: 0 5px;
+    background-color: #2138667a;
+}
+
+.animatoin_logo{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+.name{
+    font-size: 20px;
+}
+
+.profile{
+    font-size: 17px;
+    color: #A1A1A1;
+}
+.amount_container{
+    width: 90px;
+    height: 40px;
+    font-size: 2.5vw;
+    margin-left: 35px;
+}
+
+.first_line_child:hover .logo_name_container {
+    display: flex;
+}
+.first_line_child:hover .amount_container {
+    width: 90px;
+    height: 40px;
+    font-size: 2.5vw;
+    margin-left: 35px;
+    background-color: #ec720033;
+    color: #EC7100;
+}
+    
+.first_line_child:hover .amount{
+    transform: none;
+}
+}
+
+@media (max-width: 780px) and (min-width: 400px) and (orientation: landscape){
+    .people_are_earning{
+        width: 100%;
+        height: 90vmin;
+        border-radius: 20px;
+        position: relative;
+    }
+    .people_earning_heading{
+        font-size: 4.5vw;
+    }
+    
+.first_line_child{
+    width: 310px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 0 5px;
+}
+.first_line_child:hover {
+    justify-content: space-between;
+    padding: 0 5px;
+    background-color: #2138667a;
+}
+
+.animatoin_logo{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+.name{
+    font-size: 20px;
+}
+
+.profile{
+    font-size: 17px;
+    color: #A1A1A1;
+}
+.amount_container{
+    width: 90px;
+    height: 40px;
+    font-size: 2.5vw;
+    margin-left: 35px;
+}
+
+.first_line_child:hover .logo_name_container {
+    display: flex;
+}
+.first_line_child:hover .amount_container {
+    width: 90px;
+    height: 40px;
+    font-size: 2.5vw;
+    margin-left: 35px;
+    background-color: #ec720033;
+    color: #EC7100;
+}
+    
+.first_line_child:hover .amount{
+    transform: none;
+}
 }
 
 .faq{
@@ -749,6 +1207,115 @@ body{
 .accordion-item.active .arrow {
     transform: rotate(180deg); 
 }
+
+@media (max-width: 600px){
+    .faq{
+        width: 100%;
+        height: 155vmin;
+        overflow: hidden;
+    }
+    
+    .faq_heading_container{
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        margin-bottom: 30px;
+    }
+    .faq_heading{
+        font-size: 5.5vw;
+    }
+    
+    .accordion-item {
+        margin: 20px 0;
+    }
+    
+    .accordion-header {
+        height: 55px;
+        font-size: 3.7vw;
+        background-color: #F8F9FE;
+    }
+    
+    .accordion-content {
+        font-size: 3.3vw;
+    }
+    
+    .arrow {
+        width: 4vw;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1030px) and (min-height: 701px) {
+    .faq{
+        width: 100%;
+        height: 120vmin;
+        overflow: hidden;
+    }
+    
+    .faq_heading_container{
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        margin-bottom: 30px;
+    }
+    .faq_heading{
+        font-size: 5.5vw;
+    }
+    
+    .accordion-item {
+        margin: 10vw 0;
+    }
+    
+    .accordion-header {
+        height: 55px;
+        font-size: 3.5vw;
+        background-color: #F8F9FE;
+    }
+    
+    .accordion-content {
+        font-size: 3.1vw;
+    }
+    
+    .arrow {
+        width: 4vw;
+    }
+}
+
+@media (max-width: 780px) and (min-width: 400px) and (orientation: landscape) {
+    .faq{
+        width: 100%;
+        height: 160vmin;
+        overflow: hidden;
+    }
+    
+    .faq_heading_container{
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        margin-bottom: 30px;
+    }
+    .faq_heading{
+        font-size: 4.5vw;
+    }
+    
+    .accordion-item {
+        margin: 2vw 0;
+    }
+    
+    .accordion-header {
+        height: 55px;
+        font-size: 2.5vw;
+        background-color: #F8F9FE;
+    }
+    
+    .accordion-content {
+        font-size: 2.1vw;
+    }
+    
+    .arrow {
+        width: 4vw;
+    }
+}
+
 
 
 .footer{
@@ -905,7 +1472,7 @@ body{
 .privacy_policy_container a:hover{
     color: #EC7100;
 }
-/* From Uiverse.io by Yaya12085 */ 
+
 .playstore-button {
     display: inline-flex;
     align-items: center;
@@ -1061,5 +1628,483 @@ body{
     fill: white;
   }
 
+  @media (max-width: 600px){
+    .footer{
+        height: 120vmin;
+        padding: 20px 1%;
+    }
+    .top_part_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    
+    .footer_logo_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+    }
 
+    .footer_logo{
+        width: 30vw;
+    }
+
+    .conecting_to_dream_container{
+        margin: 15px 0;
+        width: 70%;
+    }
+    .connecting_to_dream_para{
+        font-size: 4.2vw;
+        color: white;
+    }
+    .try_it_yourself_btn{
+        width: 24vw;
+        height: 25px;
+        margin: 5px 0;
+        cursor: pointer;
+        font-size: 2.5vw;
+    }
+    
+    .company_solutions_community_wrapper{
+        width: 100%;
+        margin-top: 10px;
+        padding-right: 5%;
+    }
+    .company_solutions_community_heading_container{
+        width: 100%;
+        font-size: 2.5vw;
+        height: 20px;
+    }
+    
+    .below_csch_container{
+        width: 100%;
+        padding-top: 2vh;
+    }
+    
+    .footer_sub_childs{
+        gap: 2.5vw;
+    }
+    
+    .footer_sub_childs a{
+        font-size: 2.4vw;
+    }
+
+    .refer_and_earn_btn,.we_are_hiring_btn{
+        height: 20px;
+        width: 20vw;
+        font-size: 2.4vw;
+        padding: 0 5px;
+    }
+    .refer_and_earn_btn img{
+        width: 15px;
+    }
+    
+    .app_store_google_pay_button_container{
+        margin-left: 5%;
+        margin-top: 2vh;
+        width: 100%;
+    }
+    .we_are_hiring_apple_goole_btn_conatiner{
+        height: 30px;
+    }
+    
+    .we_are_hiring_btn{
+        width: 22vw;
+        position: relative;
+        padding-right: 15px;
+    }
+    
+    .we_are_hiring_btn img{
+        position: absolute;
+        width: 55px;
+        height: 25px;
+        right: -20%;
+        top: -25%;
+    }
+    .apple_goole_btn_conatiner{
+        display: flex;
+        gap: 10px;
+    }
+
+      .icon {
+        height: 5vw;
+        width: 3.5vw;
+      }
+      
+      .texts {
+        margin-left: 0.4rem;
+      }
+      
+      .text-1 {
+        font-size: 2.1vw;
+        line-height: 0.8rem;
+      }
+      
+      .text-2 {
+        font-size: 2.5vw;
+      }
+
+    .privacy_policy_container a{
+        font-size: 2.5vw;
+        margin: 0 10px;
+    }
+
+    .allrights_reserved_social_media_icons_wrapper{
+        font-size: 2.1vw;
+        margin-top: 10px;
+    }
+    
+    .made_love_and_social_media_wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    .Btn {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+      }
+      .Btn:hover {
+        width: 50px;
+        transition-duration: 0.4s;
+        border-radius: 30px;
+      }
+
+      .text {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        width: 50px;
+        font-size: 2.3vw;
+        font-weight: 600;
+        opacity: 0;
+        transition-duration: 0.4s;
+      }
+      
+      .svgIcon {
+        width:13px;
+      }
+      
+  #facebook_icon{
+    width: 13px;
+  }
+  }
+
+  @media (min-width: 601px) and (max-width: 1030px) and (min-height: 701px){
+    .footer{
+        height: 105vmin;
+        padding: 20px 1%;
+    }
+    .top_part_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    
+    .footer_logo_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+    }
+
+    .footer_logo{
+        width: 25vw;
+    }
+
+    .conecting_to_dream_container{
+        margin: 20px 0;
+        width: 70%;
+    }
+    .connecting_to_dream_para{
+        font-size: 4.2vw;
+        color: white;
+    }
+    .try_it_yourself_btn{
+        width: 24vw;
+        height: 50px;
+        margin: 5px 0;
+        cursor: pointer;
+        font-size: 2.5vw;
+    }
+    
+    .company_solutions_community_wrapper{
+        width: 100%;
+        margin-top: 20px;
+        padding-right: 5%;
+    }
+    .company_solutions_community_heading_container{
+        width: 100%;
+        font-size: 3vw;
+        height: 40px;
+    }
+    
+    .below_csch_container{
+        width: 100%;
+        padding-top: 2vh;
+    }
+    
+    .footer_sub_childs{
+        gap: 2vw;
+    }
+    
+    .footer_sub_childs a{
+        font-size: 2.4vw;
+    }
+
+    .refer_and_earn_btn,.we_are_hiring_btn{
+        height: 40px;
+        width: 20vw;
+        font-size: 2.5vw;
+        padding: 0 5px;
+    }
+    .refer_and_earn_btn img{
+        width: 25px;
+    }
+    
+    .app_store_google_pay_button_container{
+        margin-left: 5%;
+        margin-top: 2vh;
+        width: 100%;
+    }
+    .we_are_hiring_apple_goole_btn_conatiner{
+        height: 80px;
+        margin-top: 2vh;
+    }
+    
+    .we_are_hiring_btn{
+        width: 23vw;
+        position: relative;
+        padding-right: 20px;
+    }
+    
+    .we_are_hiring_btn img{
+        position: absolute;
+        width: 95px;
+        height: 45px;
+        right: -15%;
+        top: -25%;
+    }
+   
+      .icon {
+        height: 5vw;
+        width: 3.5vw;
+      }
+      
+      .texts {
+        margin-left: 0.5rem;
+      }
+      
+      .text-1 {
+        font-size: 2.1vw;
+        line-height: 1.5rem;
+      }
+      
+      .text-2 {
+        font-size: 2.5vw;
+      }
+
+    .privacy_policy_container a{
+        font-size: 2.5vw;
+        margin: 0 10px;
+    }
+
+    .allrights_reserved_social_media_icons_wrapper{
+        font-size: 2.1vw;
+        margin-top: 10px;
+    }
+    
+    .made_love_and_social_media_wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+    }
+
+    .Btn {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+      }
+      .Btn:hover {
+        width: 100px;
+        transition-duration: 0.4s;
+        border-radius: 30px;
+      }
+
+      .text {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        width: 50px;
+        font-size: 2.3vw;
+        margin-right: 20px;
+        font-weight: 600;
+        opacity: 0;
+        transition-duration: 0.4s;
+      }
+      
+  #facebook_icon{
+    width: 30px;
+  }
+  }
   
+  @media (max-width: 780px) and (min-width: 400px) and (orientation: landscape){
+    .footer{
+        height: 105vmax;
+        padding: 20px 1%;
+        overflow: hidden;
+    }
+    .top_part_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    
+    .footer_logo_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+    }
+
+    .footer_logo{
+        width: 25vw;
+    }
+
+    .conecting_to_dream_container{
+        margin: 20px 0;
+        width: 70%;
+    }
+    .connecting_to_dream_para{
+        font-size: 4.2vw;
+        color: white;
+    }
+    .try_it_yourself_btn{
+        width: 24vw;
+        height: 50px;
+        margin: 5px 0;
+        cursor: pointer;
+        font-size: 2.5vw;
+    }
+    
+    .company_solutions_community_wrapper{
+        width: 100%;
+        margin-top: 20px;
+        padding-right: 5%;
+    }
+    .company_solutions_community_heading_container{
+        width: 100%;
+        font-size: 3vw;
+        height: 40px;
+    }
+    
+    .below_csch_container{
+        width: 100%;
+        padding-top: 2vh;
+    }
+    
+    .footer_sub_childs{
+        gap: 2vw;
+    }
+    
+    .footer_sub_childs a{
+        font-size: 2.4vw;
+    }
+
+    .refer_and_earn_btn,.we_are_hiring_btn{
+        height: 40px;
+        width: 20vw;
+        font-size: 2.5vw;
+        padding: 0 5px;
+    }
+    .refer_and_earn_btn img{
+        width: 25px;
+    }
+    
+    .app_store_google_pay_button_container{
+        margin-left: 5%;
+        margin-top: 2vh;
+        width: 100%;
+    }
+    .we_are_hiring_apple_goole_btn_conatiner{
+        height: 80px;
+        margin-top: 2vh;
+    }
+    
+    .we_are_hiring_btn{
+        width: 23vw;
+        position: relative;
+        padding-right: 20px;
+    }
+    
+    .we_are_hiring_btn img{
+        position: absolute;
+        width: 95px;
+        height: 45px;
+        right: -15%;
+        top: -25%;
+    }
+   
+      .icon {
+        height: 5vw;
+        width: 3.5vw;
+      }
+      
+      .texts {
+        margin-left: 0.5rem;
+      }
+      
+      .text-1 {
+        font-size: 2.1vw;
+        line-height: 1.5rem;
+      }
+      
+      .text-2 {
+        font-size: 2.5vw;
+      }
+
+    .privacy_policy_container a{
+        font-size: 2.5vw;
+        margin: 0 10px;
+    }
+
+    .allrights_reserved_social_media_icons_wrapper{
+        font-size: 2.1vw;
+        margin-top: 10px;
+    }
+    
+    .made_love_and_social_media_wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+    }
+
+    .Btn {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+      }
+      .Btn:hover {
+        width: 100px;
+        transition-duration: 0.4s;
+        border-radius: 30px;
+      }
+
+      .text {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        width: 50px;
+        font-size: 2.3vw;
+        margin-right: 20px;
+        font-weight: 600;
+        opacity: 0;
+        transition-duration: 0.4s;
+      }
+      
+  #facebook_icon{
+    width: 30px;
+  }
+  }

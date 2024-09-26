@@ -695,7 +695,7 @@ function updateContent() {
  
     images.forEach((img, index) => {
         if (index === 0) {
-            gsap.to(img, { opacity: 1, duration: 0.5 }); 
+            gsap.to(img, { opacity: 1, duration: 0.3 }); 
         } else {
             gsap.to(img, { opacity: index === currentIndex ? 1 : 0, duration: 0.3 });
         }
