@@ -786,9 +786,9 @@ function updateContent() {
  
     images.forEach((img, index) => {
         if (index === 0) {
-            gsap.to(img, { opacity: 1, duration: 0.3, delay: index * 0.1 }); 
+            gsap.to(img, { opacity: 1, duration: 0.3}); 
         } else {
-            gsap.to(img, { opacity: index === currentIndex ? 1 : 0, duration: 0.3, delay: index * 0.1});
+            gsap.to(img, { opacity: index === currentIndex ? 1 : 0, duration: 0.3});
         }
     });
    
@@ -797,7 +797,7 @@ function updateContent() {
             gsap.to(desc, {
                 opacity: isActive ? 1 : 0,
                 y: isActive ? 0 : 30, 
-                duration: 0.3, delay: index * 0.1
+                duration: 0.3
             });
         
     });
@@ -806,7 +806,7 @@ function getEndValue() {
     if (window.innerWidth <= 768) {
         return mobileSection.offsetHeight * 1;
     } else {
-        return mobileSection.offsetHeight * 2; 
+        return mobileSection.offsetHeight * 1.5; 
     }
 }
 

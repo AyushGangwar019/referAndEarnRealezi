@@ -73,7 +73,7 @@ html.lenis, html.lenis body {
   }
   
   .header-logo{
-    width: 10rem;
+    width: 9rem;
     margin-top: 30px;
     margin-left: 4.5rem;
     position: absolute;
@@ -412,6 +412,7 @@ html.lenis, html.lenis body {
 
 @media (max-width: 1200px){
     .before_hide{
+        width: 8rem;
         display: block;
         margin-top: 45px;
         margin-left: 3rem;
@@ -446,7 +447,7 @@ html.lenis, html.lenis body {
 @media (max-width: 960px){
     .before_hide{
         display: block;
-        width: 8rem;
+        width: 7rem;
         margin-top: 45px;
         margin-left: 2.5rem;
       }
@@ -477,9 +478,9 @@ html.lenis, html.lenis body {
 }
 @media (max-width: 860px){
     .header-logo{
-        width: 8rem;
+        width: 7rem;
         margin-top: 0px;
-        margin-left: 1.5rem;
+        margin-left: 2.5rem;
         display: block;
       }
       .before_hide{
@@ -554,6 +555,11 @@ html.lenis, html.lenis body {
      }
 }
 @media (max-width: 660px){
+  .header-logo{
+    width: 6rem;
+    margin-top: 0px;
+    margin-left: 2rem;
+  }
     .first_section{
         width: 100vw;
         height: 70vmin;
@@ -647,7 +653,7 @@ html.lenis, html.lenis body {
 }
 @media (max-width: 540px) {
     .header-logo{
-        width: 7rem;
+        width: 6.5rem;
         margin-left: 3.5rem;
       }
     .refer_friends_section{
@@ -1732,6 +1738,11 @@ html.lenis, html.lenis body {
     padding-right: 50px;
   }
   
+  ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;}
+
   .footer h3 {
     font-weight: 400 !important;
     font-size: 2rem;
